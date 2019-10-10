@@ -51,5 +51,40 @@ def find_primes(upper_bound):
 	return primes
 
 
+def factorial(num):
+	"""
+	The factorial of a number.
+	On average barely quickar than product(range(1, num))
+	"""
+	# Factorial of 0 equals 1
+	if num == 0:
+		return 1
+
+	#if not, it is the product from 1...num
+	product = 1
+	for integer in range(1, num + 1):
+		product *= integer
+	return product
+
+
+def louville_distance(precision):
+	"""
+	Finds the distance between in zeroes between 2 '1's in the 
+	louville number. 
+	Will return distances, so if you sum earlier numbers together
+	you get the index at which there would have been a '1'
+	"""
+	precision += 1 		# To get far enouh
+	distances = []
+
+	for index in range(1, precision):
+		try:
+			distances.append(factorial(index) - factorial(index - 1))
+		except IndexError:
+			break
+
+	distances[0] = 1 # Because of the way the list is structured
+	return distances
+
 
 
