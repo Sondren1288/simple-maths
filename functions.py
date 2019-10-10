@@ -178,3 +178,16 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+def prime_using_sieve_of_eratosthenes(num):
+	# A program to print all primes smaller than or equal to  n using Sieve of Eratosthenes 
+	prime=[True for i in range(num+1)]
+	p=2
+	while p**2<=num:
+		if prime[p]:
+			for i in range(p**2,num+1,p):
+				prime[i]=False
+		p=p+1
+	for i in range(2,num):
+		if prime[i]:
+			print(i,end=" ")
+	
