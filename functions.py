@@ -178,3 +178,15 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+
+def Fibonacci(n): 
+	#To find nth number for fibonacci sequence
+    if n<0: #if invalid
+        print("Incorrect input") 
+    elif n==1: #base case n = 1, return 0
+        return 0
+    elif n==2: #base case if 2 then return 1
+        return 1
+    else: 
+        return Fibonacci(n-1)+Fibonacci(n-2)  #recursive
