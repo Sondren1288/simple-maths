@@ -178,3 +178,20 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def quadratic_equation(a, b, c):
+	"""
+	solution for quadratic equation
+	a*x**2 + b*x + c = 0
+	"""
+	d = b**2 - 4 * a * c
+	if d < 0:
+		return None, None
+	elif d == 0:
+		x1 = -b / (2 * a)
+		return x1, x1
+	x1 = (-b + math.sqrt(d)) / (2 * a)
+	x2 = (-b - math.sqrt(d)) / (2 * a)
+	return x1, x2
+	
+
