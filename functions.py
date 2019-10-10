@@ -178,3 +178,12 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def permutations(n, r):
+	# Number of permutations (order matters) of n things taken r at a single time
+	return factorial(n) / factorial(n-r)
+
+def combinations(n, r):
+	# Number of combinations (order doesn't matters) of n things taken r at a single time
+	return permutations(n, r) / factorial(r)
+	
