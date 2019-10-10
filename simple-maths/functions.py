@@ -1,4 +1,4 @@
-from functools import reduce
+from functools import reduce, lru_cache
 import operator
 import math
 
@@ -178,3 +178,19 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+@lru_cache
+def fib(term):
+    """
+    A recursive fibonacci function which uses memoization
+    to speed up the process
+
+    Returns the value of the fibonacci number
+    of the term variable in the sequence
+    """
+    if term == 1:
+        return 1
+    if term == 2:
+        return 2
+    elif term > 1:
+        return fib(term - 1) + fib(term - 2)
