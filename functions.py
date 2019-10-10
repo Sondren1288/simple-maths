@@ -135,5 +135,10 @@ def louville_distance(precision):
 	distances[0] = 1 # Because of the way the list is structured
 	return distances
 
+
 def point_distance(point1, point2):
-	return math.sqrt( ((point1[0]-point2[0])**2)+((point1[1]-point2[1])**2) )
+	"""
+	Returns the distance between two points given as tuples
+	"""
+	distance =  math.sqrt( ((point1[0]-point2[0])**2) + ((point1[1]-point2[1])**2) )
+	return distance
