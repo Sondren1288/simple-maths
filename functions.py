@@ -39,7 +39,7 @@ def find_primes(upper_bound):
 		flag = True 					# Flag is used to check if prime
 		for prime in primes:
 			if num % prime == 0:			# If num divided by prime == 1, then prime is a factor of num and num is not a prime
-				flag = False			# Flag is False because we can see 
+				flag = False			# Flag is False because we can see
 				break
 			if prime > math.sqrt(num) + 1: 		# If the prime gets sufficiently close to num, it can no longer divide num
 				break
@@ -105,21 +105,21 @@ def zeros(dimensions):
 	except TypeError:
 		x = dimensions		# If it fails, it will standard to 1 row
 		y = 1
-	
+
 	zeros = []
 	if y == 1:
 		zeros += [0]*x
 	else:
 		for row in range(y): 	# Makes rows with columns of 0
 			zeros.append([0]*x)
-	
+
 	return zeros
 
 
 def louville_distance(precision):
 	"""
-	Finds the distance between in zeroes between 2 '1's in the 
-	louville number. 
+	Finds the distance between in zeroes between 2 '1's in the
+	louville number.
 	Will return distances, so if you sum earlier numbers together
 	you get the index at which there would have been a '1'
 	"""
@@ -143,13 +143,13 @@ def point_distance(point1, point2):
 	distance =  math.sqrt( ((point1[0]-point2[0])**2) + ((point1[1]-point2[1])**2) )
 	return distance
 
-def gcd(n1, n2): 
+def gcd(n1, n2):
 	"""
 	Recursive function to return the GCD of n1 and n2
 	"""
-	if n1 == 0: 
-		return n2 
-	return gcd(n2 % n1, n1) 
+	if n1 == 0:
+		return n2
+	return gcd(n2 % n1, n1)
 
 def lcm(n1, n2):
 	"""
@@ -162,13 +162,13 @@ def totient(num):
 	Counts the numbers that are relative prime to the number.
 	This means that if a number 'x' has common divisors with another number 'a' lower than itself,
 	it is, 'a' is not relative prime to 'x'.
-	This means that if a number is prime, its totient function is its value - 1, as 
+	This means that if a number is prime, its totient function is its value - 1, as
 	all numbers lower than the number itself is relative prime to the number.
 	An example: totient(9):
 				1, 2, 4, 5, 7, 8 are all relative prime
 				3, 6, and 9 have at least one common divisor with 9
 				returns 6, as there are 6 numbers relative prime to 9
-	
+
 	If you visit 'https://en.wikipedia.org/wiki/Euler%27s_totient_function'
 	this function uses the function described under euler's product formula.
 	"""
@@ -178,3 +178,11 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def summ_n(i1, i2):
+    """Return the summation from i1 to i2 of n"""
+    return ((i2 * (i2+1)) / 2) - (((i1-1) * i1) / 2)
+
+def summ_nsqr(i1, i2):
+    """Return the summation from i1 to i2 of n^2"""
+    return ((i2 * (i2+1) * (2*i2 + 1)) / 6) - (((i1-1) * i1 * (2*(i1-1) + 1)) / 6)
