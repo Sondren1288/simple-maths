@@ -178,3 +178,13 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def fibonacci(n, _cache={}):
+    """
+    efficiently memoized recursive function, returns a Fibonacci number
+    """
+    if n in _cache:
+        return _cache[n]
+    elif n > 1:
+        return _cache.setdefault(n, mem_fib(n-1) + mem_fib(n-2))
+    return n
