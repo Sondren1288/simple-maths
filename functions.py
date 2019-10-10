@@ -178,3 +178,15 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def nCr(n, r):
+    """
+    A binomial coefficient gives the number of ways, disregarding order, that r objects can be chosen from among n objects;
+    more formally, the number of r-element subsets (or r-combinations) of an n-element set.
+    nCr = (n!) / (r! * (n-r)!)
+    :param n:
+    :param r:
+    :return: nCr Integer
+    """
+    return factorial(n) / (factorial(r) * factorial(n - r))
+
