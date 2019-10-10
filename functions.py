@@ -178,3 +178,21 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def sumOfAP( a, d,n) : 
+	""" 
+	sum of arithmetic series.
+	e.g.
+	Input : a = 1
+	        d = 3
+		n = 4
+	Output : 22
+	1 + 4 + 7 + 10 = 22
+	"""
+    sum = 0
+    i = 0
+    while i < n : 
+        sum = sum + a 
+        a = a + d 
+        i = i + 1
+    return sum
