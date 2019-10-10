@@ -29,24 +29,34 @@ def prime_check(num):
 
 def find_primes(upper_bound):
 	"""
-	Find primes up to upper_bound
-	An attemted use of sieve
+	Returns all primess up to upper_bound (exclusive) using the sieve of Eratosthenes.
+	The numbers are returned as a list.
+	Example: find_primes(7) -> [2, 3, 5]
 	"""
-	primes = [2]
 
+	# 1 marks a potential prime number, 0 marks a non-prime number
+	# indexes 0 and 1 are not touched
+	is_prime = [1] * upper_bound
 
-	for num in range(3, upper_bound):
-		flag = True 					# Flag is used to check if prime
-		for prime in primes:
-			if num % prime == 0:			# If num divided by prime == 1, then prime is a factor of num and num is not a prime
-				flag = False			# Flag is False because we can see 
-				break
-			if prime > math.sqrt(num) + 1: 		# If the prime gets sufficiently close to num, it can no longer divide num
-				break
+	# list of found primes
+	primes = []
 
-		# If flag is true we add the number to primes
-		if flag:
-			primes.append(num)
+	for n in range(2, upper_bound):
+		if not is_prime[n]:
+			# n was marked as non-prime
+			continue
+
+		# n is a prime number
+		primes.append(n)
+
+		# mark all multiples of n as non-prime
+		# this is only necessary up to sqrt(n) because all numbers p = n * o
+		# with n > sqrt(n) also the divisor o < sqrt(n)
+		if n * n <= upper_bound:
+			m = 2 * n
+			while m < upper_bound:
+				is_prime[m] = 0
+				m += n
 
 	return primes
 
