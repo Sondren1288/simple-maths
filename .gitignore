@@ -1,0 +1,5 @@
+# Ingore VSCode files
+.vscode/
+
+#Ignore Virtualenv files
+venv/
