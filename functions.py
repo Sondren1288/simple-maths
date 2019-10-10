@@ -142,3 +142,12 @@ def point_distance(point1, point2):
 	"""
 	distance =  math.sqrt( ((point1[0]-point2[0])**2) + ((point1[1]-point2[1])**2) )
 	return distance
+
+def gcd(num1,num2):
+	"""
+	Find the greatest Common divisors of two numbers.
+	"""
+	if num2 == 0:
+        	return num1
+    	else:
+        	return gcd(num2,num1%num2)
