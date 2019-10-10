@@ -178,3 +178,11 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+def isEven(num):
+	"""
+	 Function to check wether the number is even or not
+	 """
+	 if(num%2==0):
+		 return True
+	else:
+		return False
