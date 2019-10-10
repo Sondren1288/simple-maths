@@ -178,3 +178,19 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def floor(num):
+	"""
+	Function to return Greatest Integer/Floor of num
+	"""
+	return int(num)
+
+def gcd2(n1, n2):
+	"""
+	Non-Recursive function to return the GCD of n1 and n2
+	"""
+	if n1 < n2:
+		n1, n2 = n2, n1
+	while n1 % n2:
+		n1, n2 = n2, n1 % n2
+	return n2
