@@ -178,3 +178,23 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def fibonacci(n): 
+	"""
+	Function for nth fibonacci number - Space Optimization, Use Dynamic Programming with Space Optimization
+	Taking 1st two fibonacci numbers as 0 and 1 
+	"""
+    a = 0
+    b = 1
+    if n < 0: 
+        print("Incorrect input") 
+    elif n == 0: 
+        return a 
+    elif n == 1: 
+        return b 
+    else: 
+        for i in range(2,n): 
+            c = a + b 
+            a = b 
+            b = c 
+        return b 
