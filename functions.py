@@ -125,14 +125,12 @@ def louville_distance(precision):
 	"""
 	precision += 1 		# To get far enouh
 	distances = []
-	factorial_cache = {}
-	def factorial_(num):
-		if num not in factorial_cache:
-			factorial_cache[num] = factorial(num)
-		return factorial_cache[num]
 
 	for index in range(1, precision):
-		distances.append(factorial_(index) - factorial_(index - 1))
+		try:
+			distances.append(factorial(index) - factorial(index - 1))
+		except IndexError:
+			break
 
 	distances[0] = 1 # Because of the way the list is structured
 	return distances
