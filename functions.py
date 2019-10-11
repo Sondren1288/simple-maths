@@ -178,3 +178,9 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def pythag(side_a, side_b):
+	'''
+	Function to return the length of the hypotenuse of a right triangle, given the other two legs.
+	'''
+	return math.sqrt(side_a ** 2 + side_b ** 2)
