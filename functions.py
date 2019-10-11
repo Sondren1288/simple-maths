@@ -178,3 +178,13 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def isNaturalNum(num):
+	"""
+	Checks if number is a natural number.
+	"""
+    if num > 0 and type(num) is IntType:
+        return True
+    else:
+        return False
+
