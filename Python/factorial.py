@@ -12,3 +12,13 @@ def factorial(num):
     for integer in range(1, num + 1):
         product *= integer
     return product
+
+
+
+def factorialRecursion(n):
+    #The factorial of a number, done with Recursion.
+    #Limit set to 0, to cancel the Recursion-Loop
+
+    if n < 1:
+        return 1
+    return factorialRecursion(n-1) * n
