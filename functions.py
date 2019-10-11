@@ -27,6 +27,19 @@ def prime_check(num):
 	return True
 
 
+def recur_fibo(n): 
+   """
+   Recursive function to
+   print Fibonacci sequence
+
+   """
+   if n <= 1:  
+       return n  
+   else:  
+       return(recur_fibo(n-1) + recur_fibo(n-2))  
+
+
+
 def find_primes(upper_bound):
 	"""
 	Find primes up to upper_bound
