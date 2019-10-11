@@ -1,6 +1,6 @@
 from functools import reduce
 import operator
-import math
+	import math
 
 
 def product(iterable):
@@ -178,3 +178,19 @@ def totient(num):
 	phi = num * product(uniqe_primes) 	# The totient function is commonly called phi
 	phi = int(round(phi)) 				# As phi is a whole number
 	return phi
+
+def getsin(x): 
+	"""
+		Function to get sin
+	"""
+    multiplier = 1
+    result = 0
+     
+  for i in range(1,20,2):
+        result += multiplier*pow(x,i)/math.factorial(i)
+        multiplier *= -1
+         
+    return result
+      
+getsin(math.pi/2) # returns 1.0
+getsin(math.pi/4) # returns 0.7071067811865475
