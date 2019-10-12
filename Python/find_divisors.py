@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 11 12:49:26 2019
-
-@author: David del Río Medina
-"""
 
 from math import ceil
 

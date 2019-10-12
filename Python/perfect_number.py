@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 11 12:38:26 2019
-
-@author: David del Río Medina
-"""
 
 from find_divisors import find_divisors
 
