@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 11 12:04:02 2019
-
-@author: David del Río Medina
-"""
 
 from prime_factor import prime_factors
 
