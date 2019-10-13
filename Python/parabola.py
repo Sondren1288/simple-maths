@@ -2,36 +2,35 @@
 
 def find_delta(a, b, c):
     """
-    docstring
+    Function that returns the delta of a quadratic equation.
     """
-    # TODO: find delta = b^2 - 4ac
+
     if a == 0:
-        raise Exception("a is 0! [y = ax^2 + bx + c , a != 0]")
+        raise ValueError("a is 0! [y = ax^2 + bx + c , a != 0]")
+
     delta = b**2 - 4*a*c
     return delta
 
 def find_vertex(a, b, c):
     """
-    docstring
+    Function that returns the vertex of a parabola, given three coefficients.
+
     returns: tuple
     """
-    # TODO: find vertex = (- b/2a ; - delta/4a)
+
     delta = find_delta(a, b, c)
-    coor = ( -b/(2*a), -(delta/(4*a)) )
-    return coor
+
+    vertex = ( -b/(2*a), -(delta/(4*a)) )
+    return vertex
 
 def find_focus(a, b, c):
     """
-    docstring
+    Function that returns the focus of a parabola, given three coefficients.
+
+    returns: tuple
     """
-    # TODO: find focus = (- b/2a ; 1-delta / 4a)
-    pass
 
+    delta = find_delta(a, b, c)
 
-f = 350
-g = -5
-h = 215
-
-print(find_delta(f, g, h)) # -23
-x, y = find_vertex(f, g, h)
-print(x,"\n", y)
+    focus = ( -b/(2*a), (1-delta)/(4*a) )
+    return focus
