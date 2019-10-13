@@ -1,8 +1,8 @@
 import math
 
-def multi_dimensional_distance(point1, point2):
+def multidimensional_distance(point1, point2):
     """
-    Return the euclidean distance between two points in n-dimensional space 
+    Return the euclidean distance between two points in multidimensional space 
     given as tuples.
     """
 
