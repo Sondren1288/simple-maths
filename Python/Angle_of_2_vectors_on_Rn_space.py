@@ -1,8 +1,11 @@
 import math
 
 
-def inner_p_s(u, v):  # Calculate the Inner product space of the 2 vectors
-
+def inner_p_s(u, v):  
+    """
+    
+    Calculate the Inner product space of the 2 vectors
+    """
     s = 0
     if len(u) != len(v):
         s = -1
@@ -12,7 +15,11 @@ def inner_p_s(u, v):  # Calculate the Inner product space of the 2 vectors
     return s
 
 
-def calc_norm(k):          # Calculate the Euclidean norm On an n-dimensional Euclidean space Rn
+def calc_norm(k):          
+    """ 
+    
+    Calculate the Euclidean norm On an n-dimensional Euclidean space Rn
+    """
 
     c = 0
     for i in range(len(k)):
@@ -21,7 +28,11 @@ def calc_norm(k):          # Calculate the Euclidean norm On an n-dimensional Eu
     return x
 
 
-def calc_angle(m, n):            # Calculate the cosθ, where θ is the angle between 2 vectors, m and n
+def calc_angle(m, n):            
+    """
+    
+    Calculate the cosθ, where θ is the angle between 2 vectors, m and n
+    """
 
     if inner_p_s(m, n) == -1:
         print('Error! The 2 vectors should belong on the same space Rn!')
