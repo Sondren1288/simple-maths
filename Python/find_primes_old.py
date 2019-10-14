@@ -14,9 +14,7 @@ def find_primes(upper_bound):
             if num % prime == 0:  # If num divided by prime == 1, then prime is a factor of num and num is not a prime
                 flag = False  # Flag is False because we can see
                 break
-            if prime > math.sqrt(
-                    num
-            ) + 1:  # If the prime gets sufficiently close to num, it can no longer divide num
+            if prime > math.sqrt(num) + 1:  # If the prime gets sufficiently close to num, it can no longer divide num
                 break
 
         # If flag is true we add the number to primes

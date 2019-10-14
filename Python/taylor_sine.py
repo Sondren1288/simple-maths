@@ -14,8 +14,8 @@ def taylor_sine(x, accuracy=20):
     multiplier = 1
     result = 0
     
-    for i in range(1,accuracy,2):
-        result += multiplier*math.pow(x,i)/math.factorial(i)
+    for i in range(1, accuracy, 2):
+        result += multiplier * math.pow(x, i) / math.factorial(i)
         multiplier *= -1
     
     return result
