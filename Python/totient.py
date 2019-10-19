@@ -1,4 +1,4 @@
-from prime_factor import prime_factors
+from find_factors import prime_factors
 from product import product
 
 

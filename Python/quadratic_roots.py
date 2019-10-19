@@ -1,4 +1,4 @@
-def QuadraticRoots(a, b, c):
+def quadratic_roots(a, b, c):
     """
     Returns a tuple containg the roots of the quadratic equation ax^2+bx+c
     If the roots are imaginary then an error message is displayed and None is returned
