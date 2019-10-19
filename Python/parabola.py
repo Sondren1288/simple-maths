@@ -11,6 +11,7 @@ def find_delta(a, b, c):
     delta = b**2 - 4*a*c
     return delta
 
+
 def find_vertex(a, b, c):
     """
     Function that returns the vertex of a parabola, given three coefficients.
@@ -22,6 +23,7 @@ def find_vertex(a, b, c):
 
     vertex = ( -b/(2*a), -(delta/(4*a)) )
     return vertex
+
 
 def find_focus(a, b, c):
     """
