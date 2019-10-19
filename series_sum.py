@@ -11,6 +11,7 @@ def var_sum(*args):
             return
     return total
 
+
 def sum_of_n_natual_numbers(n):
     """
     Returns sum of first n natural numbers
@@ -23,6 +24,7 @@ def sum_of_n_natual_numbers(n):
         return 
 
     return n*(n+1) // 2
+
 
 def sum_of_n_even_numbers(n):
     """
@@ -37,6 +39,7 @@ def sum_of_n_even_numbers(n):
 
     return n*(n+1)
 
+
 def sum_of_n_odd_numbers(n):
     """
     Returns sum of first n odd numbers
@@ -49,6 +52,7 @@ def sum_of_n_odd_numbers(n):
         return 
 
     return n*n
+
 
 def sum_of_square_of_n_numbers(n):
     """
