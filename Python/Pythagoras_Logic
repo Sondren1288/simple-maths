@@ -1,0 +1,15 @@
+import math
+
+
+def pythagoras(p, b):
+    sq = math.pow(p, 2) + math.pow(b, 2)
+    if sq > 0:
+        h = math.sqrt(sq)
+        print("The hypotenuse is :" , h)
+    else:
+        print("The input variables has zeroes")
+
+perp = int(input("Enter the perpendicular of the traingle :"))
+base = int(input("Enter the base of the traingle :"))
+
+hyp = pythagoras(perp , base)
