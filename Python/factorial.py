@@ -1,14 +1,12 @@
 def factorial(num):
-    """
-    The factorial of a number.
-    On average barely quicker than product(range(1, num))
-    """
-    # Factorial of 0 equals 1
-    if num == 0:
-        return 1
+	"""
+	The factorial of a number.
+	On average barely quicker than product(range(1, num))
+	Recursive implementation
+	"""
+	# Factorial of 0 equals 1
+	if num == 0:
+		return 1
+	else :
+		return num*factorial(num-1)
 
-    # if not, it is the product from 1...num
-    product = 1
-    for integer in range(1, num + 1):
-        product *= integer
-    return product

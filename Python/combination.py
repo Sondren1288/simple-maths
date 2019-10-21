@@ -1,16 +1,16 @@
 def combination(n,r):
-    """
-    Function to calculate combination of 'n' objects, selected 'r' at a time.
-    """
-    N = n
-    if r > n//2:
-        R = n-r
-    else:
-        R = r
-    numerator = 1
-    denominator = 1
-    for i in range (R, 0, -1):
-        numerator *= N
-        denominator *= i
-        N -= 1
-    return int(numerator / denominator)
+	"""
+	Function to calculate combination of 'n' objects, selected 'r' at a time.
+	"""
+	N = n
+	if r > n//2:
+		R = n-r
+	else:
+		R = r
+	numerator = 1
+	denominator = 1
+	for i in range (R, 0, -1):
+		numerator *= N
+		denominator *= i
+		N -= 1
+	return int(numerator / denominator)
