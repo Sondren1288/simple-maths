@@ -1,0 +1,17 @@
+#question : https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
+n=int(input())
+a=list(map(int,input().split()))
+s,b=map(int,input().split())
+count=0
+for x in range(b):
+    a.append(0)
+
+for x in range(n):
+    temp=[]
+    for y in range(x,x+b):
+        temp.append(a[y])
+    if(sum(temp)==s):
+        count+=1
+print(count)
+    
