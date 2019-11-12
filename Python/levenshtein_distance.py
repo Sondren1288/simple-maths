@@ -1,4 +1,9 @@
 def levenshtein(s1, s2):
+    """
+    Takes two strings and calculates
+    the number of single character edits
+    required for the strings to match.
+    """
     # first string should be longest string
     if len(s1) < len(s2):
         return levenshtein(s2, s1)
