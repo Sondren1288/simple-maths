@@ -1,7 +1,7 @@
 import math
 
 
-def inner_p_s(u, v):  
+def inner_p_s(u, v):
     """
     Calculate the Inner product space of the 2 vectors
     """
@@ -15,7 +15,7 @@ def inner_p_s(u, v):
 
 
 def calc_norm(k):          
-    """ 
+    """
     Calculate the Euclidean norm On an n-dimensional Euclidean space Rn
     """
     c = 0
@@ -25,7 +25,7 @@ def calc_norm(k):
     return x
 
 
-def calc_angle(m, n):            
+def calc_angle(m, n):
     """ 
     Calculate the cosθ, 
     where θ is the angle between 2 vectors, m and n
@@ -38,3 +38,8 @@ def calc_angle(m, n):
     else:
         angle = (inner_p_s(m, n))/(calc_norm(m) * calc_norm(n))
         return angle
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
