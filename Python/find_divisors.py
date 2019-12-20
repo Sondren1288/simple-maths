@@ -2,6 +2,7 @@
 
 from math import ceil
 
+
 def find_divisors(n):
     """
     Find all the divisors of a positive number n, including 1 and n.

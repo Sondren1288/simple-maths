@@ -2,6 +2,7 @@
 
 from find_divisors import find_divisors
 
+
 def perfect_number(n):
     """
     Check if a positive integer is a perfect number.

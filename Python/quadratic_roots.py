@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 def quadratic_roots(a, b, c):
     """
     Returns a tuple containg the roots of the quadratic equation ax^2+bx+c

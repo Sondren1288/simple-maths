@@ -1,5 +1,6 @@
 import math
 
+
 def rms(list_):
     """
     Finds the root mean square of a list of numbers

@@ -1,5 +1,6 @@
 import math
 
+
 def binomial_coefficient(n, k):
     """
     Finds the binomial coefficient, given n and k.
