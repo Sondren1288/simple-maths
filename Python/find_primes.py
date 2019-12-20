@@ -3,7 +3,7 @@ import math
 
 def find_primes_sieve(upper_bound):
     """
-    Returns all primess up to upper_bound (exclusive) using the sieve of Eratosthenes.
+    Returns all primes up to upper_bound (exclusive) using the sieve of Eratosthenes.
     The numbers are returned as a list.
     Example: find_primes(7) -> [2, 3, 5]
     """

@@ -1,5 +1,5 @@
 """
-Amicable numbers are numbers where the sum of the diviors equals the other nummber,
+Amicable numbers are numbers where the sum of the divisors equals the other number,
 where the divisors would be every number that divides a number n except n itself (includes 1).
 
 An example of amicable numbers:
