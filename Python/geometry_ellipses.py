@@ -10,7 +10,7 @@ Note that the standard equation for an ellipse is given by:
 (x/a)^2 + (y/b)^2 + (z/c)^2 = 1
 """
 
-def ellipsoid_volume(a,b,c):
+def volume_ellipsoid(a,b,c):
     """
     Returns the volume of an ellipsoid given a, b and c
     Equation: A = 4/3 pi a b c
@@ -18,7 +18,7 @@ def ellipsoid_volume(a,b,c):
     return (4/3) * pi * a * b * c
 
 
-def ellipsoid_surface_area(a,b,c):
+def area_surface_ellipsoid(a,b,c):
     """
     Returns the surface area of an ellipsoid given a, b and c
     Equation: A = 4 pi ((a^p b^p + a^p c^p + b^p c^p) / 3)^(1/p)
@@ -27,7 +27,7 @@ def ellipsoid_surface_area(a,b,c):
     return 4 * pi * pow(((pow(a, p) * pow(b, p) + pow(a, p) * pow(c, p) + pow(b, p) * pow(c, p)) / 3),(1/p))
 
 
-def ellipse_area(a,b):
+def area_ellipse(a,b):
     """
     Returns the area of an ellipse given a and b
     Equation: A = pi a b
@@ -35,7 +35,7 @@ def ellipse_area(a,b):
     return pi * a * b
 
 
-def ellipse_circumference(a,b):
+def circumference_ellipse(a,b):
     """
     Returns the circumference of an ellipse given a and b
     Equation: C = 2 pi sqrt((a^2 + b^2) / 2)
