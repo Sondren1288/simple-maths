@@ -26,3 +26,17 @@ def lcm(n1, n2):
     (least common multiple) of two numbers
     """
     return (n1 * n2) / gcd(n1, n2)
+
+
+def lcm_trial(a,b):
+    """
+    Finds the least common multiple of 
+    2 numbers without using GCD
+    """
+    greater = b if a < b else a
+    while(True):
+        if ((greater % a == 0) & (greater % b == 0)):
+            lcm = greater
+            break
+        greater += 1
+    return lcm
