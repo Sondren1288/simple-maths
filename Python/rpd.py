@@ -1,8 +1,8 @@
-def rpd(x,y):
+def relatice_percent_difference(x,y):
     """
     Calculates the relative percent difference of 2 numbers 
     |x-y|/avg(x,y) * 100
     """
-    #x= float(x)
-    #y= float(y)
-    return abs(float(x-y))/abs(float((x+y)/2))*100
+    average = abs(x + y) / 2
+    rpd = abs(x - y) / average * 100
+    return rpd 
