@@ -71,4 +71,3 @@ def prime_check(num):
         if num % n == 0:
             return False
     return True
-
