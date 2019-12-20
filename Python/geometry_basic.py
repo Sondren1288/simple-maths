@@ -23,14 +23,23 @@ def perimeter_square(n):
 
 
 # Triangles
-def area_triangle(a, b, c):
+def area_triangle_heron(a, b, c):
     """
     This function applies the heron's formula to calculate
-    the area of traingle, it takes the dimensions of three sides
+    the area of triangle, it takes the dimensions of three sides
     and returns the value of area in respective square dimensions
     """
     s = (a + b + c) / 2 # Semi-perimeter
     area = sqrt(s * (s - a) * (s - b) * (s - c))
+    return area
+
+
+def area_triangle(b, h):
+    """
+    Returns the area of a triangle given its base
+    and its height
+    """
+    area = b * h / 2
     return area
 
 
