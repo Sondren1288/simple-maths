@@ -65,6 +65,13 @@ def area_circle(radius):
     return pi * pow(radius,2)
 
 
+def perimeter_circle(radius):
+    """
+    Calculates the perimeter of a circle given the radius
+    """
+    return 2* pi * radius
+
+
 # Spheres
 def volume_sphere(radius):
     """
