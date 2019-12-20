@@ -10,7 +10,7 @@ and the divisors of 284 are 1, 2, 4, 71 and 142, of which the sum is 220.
 
 def sum_proper_divisors(x):
     """
-    calculate the sum of x's proper divisors
+    Calculate the sum of x's proper divisors.
     """
 
     s = 1
@@ -22,7 +22,7 @@ def sum_proper_divisors(x):
 
 def amicable_numbers(x, y):
     """"
-    Checking if x and y are amicable numbers
+    Checking if x and y are amicable numbers.
     """
 
     if y == sum_proper_divisors(x) and x == sum_proper_divisors(y):
@@ -34,8 +34,8 @@ def amicable_numbers(x, y):
 
 def incompletely_amicable_numbers(x, y):
     """"
-    Checking if x and y are incompletely amicable numbers
-    In other words, checks if the sum of the divisors is equal
+    Checking if x and y are incompletely amicable numbers.
+    In other words, checks if the sum of the divisors is equal.
     """
 
     if sum_proper_divisors(x) == sum_proper_divisors(y):
