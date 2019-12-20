@@ -42,6 +42,23 @@ def area_circle(radius):
     return pi * pow(radius,2)
 
 
+# Spheres
+def volume_sphere(radius):
+    """
+    Returns the volume of a sphere given a radius
+    Equation: V = 4/3 pi r^3
+    """
+    return (4/3) * pi * pow(radius,3)
+
+
+def area_sphere(radius):
+    """
+    Returns the surface area of a sphere given a radius
+    Equation: SA = 4 pi r^2
+    """
+    return 4 * pi * pow(radius,2)
+
+
 # Cylinders
 def area_cylinder(r, h):
     """
