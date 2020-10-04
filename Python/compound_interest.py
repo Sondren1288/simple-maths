@@ -6,5 +6,5 @@ def simple_interest(principle, rate, time, number):
     3. time for time period(in years).
     4. number is the number of terms in a year.
     '''
-    ci = principle ( 1 + rate/(100*number))^(number*time)
+    ci = principle*(1+rate/(100*number))^(number*time)
     return ci
