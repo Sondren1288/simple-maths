@@ -1,4 +1,4 @@
-import collections
+from collections import Counter as _Counter
 
 
 def unique_elements(list_):
@@ -6,12 +6,8 @@ def unique_elements(list_):
     Functions to find unique elements from a list of given numbers.
     Can also use 'list(set([list_]))'
     """
-    uniques = []
-    for number in list_:
-        if number not in uniques:
-            uniques.append(number)
+    return [number for number in list_ if number not in list_]
     
-    return uniques
 
 
 def frequency(list_):
@@ -19,6 +15,6 @@ def frequency(list_):
     Finds the occurances of elements in a list.
     Works with numbers not consisting of numbers as well
     """
-    occurances = collections.Counter(list_)
-    return occurances
+    return _Counter(list_)
+    
     
