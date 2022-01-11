@@ -1,5 +1,5 @@
-import operator
-from functools import reduce
+from operator import mul as _mul
+from functools import reduce as _reduce
 
 
 def product(iterable):
@@ -7,5 +7,4 @@ def product(iterable):
     Returns the product of an iterable
     If the list is empty, returns 1
     """
-    product_ = reduce(operator.mul, iterable, 1)
-    return product_
+    return reduce(operator.mul, iterable, 1)
