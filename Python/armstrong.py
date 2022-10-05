@@ -10,5 +10,4 @@ def armstrong_number(number):
         calc //= 10
     if number == sum_:
         return True
-    else:
-        return False
+    return False

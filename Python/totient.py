@@ -20,6 +20,5 @@ def totient(num):
     # set(prime_factors(num)) to get only unique primes.
     # it is the (1 - 1/p) part from the wiki-page
     uniqe_primes = [(1 - 1 / p) for p in set(prime_factors(num))]
-    phi = num * product(uniqe_primes)  # The totient function is commonly called phi
-    phi = int(round(phi))  # As phi is a whole number
-    return phi
+    phi = num * product(uniqe_primes)  # The totient function is commonly called phi      
+    return int(round(phi)) # As phi is a whole number
