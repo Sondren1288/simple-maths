@@ -1,5 +1,10 @@
-# Ingore VSCode files
+# Ingore editor files
 .vscode/
+.idea/
 
-#Ignore Virtualenv files
+# Ignore Virtualenv files
 venv/
+
+# Ignore pycache
+__pycache__/
+
