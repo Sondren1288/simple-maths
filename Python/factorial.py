@@ -18,10 +18,11 @@ def factorial(num):
     return product
 
 
-def factorialRecursion(n):
-    #The factorial of a number, done with Recursion.
-    #Limit set to 0, to cancel the Recursion-Loop
-
+def factorial_recursion(n):
+    """
+    The factorial of a number, done with Recursion.
+    Limit set to 0, to cancel the Recursion-Loop
+    """
     if n < 1:
         return 1
     return factorialRecursion(n-1) * n

@@ -69,7 +69,7 @@ def perimeter_circle(radius):
     """
     Calculates the perimeter of a circle given the radius
     """
-    return 2* pi * radius
+    return 2 * pi * radius
 
 
 # Spheres
