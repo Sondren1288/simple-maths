@@ -1,11 +1,23 @@
 from find_primes import find_primes_sieve
 
 
+def find_factors(n):
+    """
+    Finds a list of factors of a number
+    """
+    factList = {1, n}
+    for i in range(2, int(n ** 0.5) + 1):
+        if (n % i == 0):
+            factList.add(i)
+            factList.add(n // i)
+    return sorted(factList)
+
+
 def prime_factors(num):
     """
     Finds the smallest primes that divide a number.
     For unique primes, turn the list into a set.
-    Example: 	120 / 2 = 60
+    Example:    120 / 2 = 60
                 60 / 2 = 30
                 30 / 2 = 15
                 15 / 3 = 5
@@ -25,3 +37,4 @@ def prime_factors(num):
             factors.append(prime)   # a number is divisible by a prime
 
     return factors
+    

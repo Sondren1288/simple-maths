@@ -12,6 +12,7 @@ def louville_distance(precision):
     distances = []
 
     factorial_cache = {}
+
     def factorial_(num):
         if num not in factorial_cache:
             factorial_cache[num] = factorial(num)
